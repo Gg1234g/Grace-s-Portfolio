@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fried Fish Recipe | Grace Owich</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <button class="toggle-btn">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero recipe-hero">
+        <div class="hero-content">
+            <h1>Fried Fish</h1>
+            <p>Golden, crispy, and deliciously seasoned!</p>
+            <div class="recipe-meta-large">
+                <span><i class="fas fa-clock"></i> 30 minutes</span>
+                <span><i class="fas fa-fire"></i> Easy</span>
+                <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="recipe-container">
+        <div class="recipe-content">
+            <div class="recipe-image">
+                <img src="fried fish.jpg" alt="Fried Fish" class="recipe-img">
+                <div class="recipe-actions">
+                    <button class="save-recipe" id="saveFriedFish"><i class="far fa-bookmark"></i> Save Recipe</button>
+                    <button class="print-recipe" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                </div>
+            </div>
+
+            <div class="recipe-details">
+                <div class="recipe-section">
+                    <h2><i class="fas fa-list-ul"></i> Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox"> 1 cup all-purpose flour</li>
+                        <li><input type="checkbox"> ½ cup milk</li>
+                        <li><input type="checkbox"> ½ cup water</li>
+                        <li><input type="checkbox"> ¼ tsp baking powder</li>
+                        <li><input type="checkbox"> 1 tsp salt</li>
+                        <li><input type="checkbox"> 4 white fish fillets (about 150g each)</li>
+                        <li><input type="checkbox"> Vegetable oil for frying</li>
+                        <li><input type="checkbox"> Lemon wedges for serving</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-section">
+                    <h2><i class="fas fa-mortar-pestle"></i> Instructions</h2>
+                    <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Prepare the Batter</h3>
+                            <p>In a large bowl, whisk together the flour, milk, water, baking powder, and salt until smooth. The consistency should be similar to pancake batter. Let it rest for 10 minutes while you prepare the fish.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Prepare the Fish</h3>
+                            <p>Pat the fish fillets dry with paper towels. This helps the batter adhere better. Cut larger fillets into smaller pieces if desired, about 10cm long.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Heat the Oil</h3>
+                            <p>Pour oil into a deep fryer or heavy-bottomed pot to a depth of about 5cm. Heat to 365°F (185°C). Use a thermometer for accuracy, or test by dropping a small amount of batter in - it should sizzle and float immediately.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Coat and Fry</h3>
+                            <p>Dip each fish fillet into the batter, letting excess drip off. Carefully lower into the hot oil. Don't overcrowd - fry in batches if necessary. Fry for 2-3 minutes per side until golden brown and crispy.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Drain and Serve</h3>
+                            <p>Remove fried fish with a slotted spoon and drain on a wire rack or paper towels. Sprinkle with a little extra salt while still hot. Serve immediately with lemon wedges and your favorite dipping sauce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <h2><i class="fas fa-chart-pie"></i> Nutrition Facts</h2>
+                    <div class="nutrition-facts">
+                        <div class="nutrition-item">
+                            <h3>Calories</h3>
+                            <p>91</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <h3>Protein</h3>
+                            <p>3g</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <h3>Fat</h3>
+                            <p>1g</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <h3>Carbs</h3>
+                            <p>18g</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <h3>Sodium</h3>
+                            <p>1372mg</p>
+                        </div>
+                    </div>
+                    <p class="nutrition-note">*Nutrition values are approximate and based on one serving</p>
+                </div>
+
+                <div class="recipe-section">
+                    <h2><i class="fas fa-lightbulb"></i> Tips & Variations</h2>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <h3><i class="fas fa-seedling"></i> Gluten-Free Option</h3>
+                            <p>Use gluten-free flour blend instead of all-purpose flour.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h3><i class="fas fa-pepper-hot"></i> Spicy Version</h3>
+                            <p>Add ½ tsp cayenne pepper or paprika to the batter.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h3><i class="fas fa-fish"></i> Fish Alternatives</h3>
+                            <p>Works well with cod, haddock, tilapia, or catfish.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h3><i class="fas fa-utensils"></i> Serving Ideas</h3>
+                            <p>Serve in tacos, with fries, or as fish and chips.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-notes">
+                    <h2><i class="fas fa-edit"></i> Notes</h2>
+                    <ul>
+                        <li>For extra crispiness, you can double-dip the fish - coat in flour first, then batter.</li>
+                        <li>Maintain oil temperature between 350-375°F for best results.</li>
+                        <li>Leftovers can be reheated in a 375°F oven for 10 minutes to regain crispiness.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Connect With Me</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grace Owich | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

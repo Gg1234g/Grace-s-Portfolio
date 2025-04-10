@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Dishes | Grace's Kitchen</title>
+    <meta name="description" content="Chef Grace Owich's legendary grilled chicken & crispy fried fish.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* === 3D FLOATING DISH CONTAINERS === */
+        .floating-dishes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 20px;
+            perspective: 1000px;
+        }
+        
+        .dish-container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .dish-container:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 35px 60px rgba(255, 45, 117, 0.4);
+        }
+        
+        .dish-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .dish-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .dish-container:hover .dish-img {
+            transform: scale(1.05);
+        }
+        
+        .floating-tag {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            color: #ff2d75;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: floatTag 6s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        @keyframes floatTag {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        
+        .dish-content {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .dish-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff2d75;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .dish-content p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* === GLOWING BUTTONS === */
+        .glow-button {
+            background: linear-gradient(45deg, #ff2d75, #ff6b9e);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 45, 117, 0.4);
+        }
+        
+        .glow-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 45, 117, 0.6);
+        }
+        
+        /* === DISH REFLECTION (3D EFFECT) === */
+        .dish-reflection {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to top, rgba(255,255,255,0.1), transparent);
+            transform: scaleY(-1);
+            opacity: 0.5;
+            filter: blur(5px);
+            transition: all 0.5s ease;
+        }
+        
+        .dish-container:hover .dish-reflection {
+            opacity: 0.8;
+            bottom: -60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">GRACE'S KITCHEN</a>
+            <button class="toggle-btn">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero menu-hero">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">SIGNATURE DISHES</h1>
+            <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">Crafted with <span class="highlight">passion</span>, served with <span class="highlight">perfection</span>.</p>
+        </div>
+    </section>
+
+    <!-- 3D FLOATING DISH CONTAINERS -->
+    <section class="floating-dishes">
+        <!-- GRILLED CHICKEN (3D CARD) -->
+        <div class="dish-container" onclick="window.location.href='recipe.html'">
+            <div class="dish-image">
+                <img src="grilled chicken.jpg" alt="Grilled Chicken" class="dish-img">
+                <div class="floating-tag" style="top: 20%; left: 10%;">24-Hour Marinade</div>
+                <div class="floating-tag" style="top: 40%; right: 10%;">Wood-Fired</div>
+                <div class="floating-tag" style="bottom: 30%; left: 15%;">Chef's Secret</div>
+            </div>
+            <div class="dish-content">
+                <h3>GRILLED CHICKEN SUPREME</h3>
+                <p>Tender, smoky, and marinated in a 14-spice blend.</p>
+                <button class="glow-button">VIEW RECIPE <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="dish-reflection"></div>
+        </div>
+
+        <!-- FRIED FISH (3D CARD) -->
+        <div class="dish-container" onclick="window.location.href='recipe1.html'">
+            <div class="dish-image">
+                <img src="fried fish.jpg" alt="Fried Fish" class="dish-img">
+                <div class="floating-tag" style="top: 25%; left: 15%;">Triple-Crusted</div>
+                <div class="floating-tag" style="top: 60%; right: 15%;">Golden Crisp</div>
+                <div class="floating-tag" style="bottom: 20%; left: 50%;">Zesty Dip</div>
+            </div>
+            <div class="dish-content">
+                <h3>GOLDEN CRISP FISH</h3>
+                <p>Fresh catch in our legendary triple-layer crust.</p>
+                <button class="glow-button">VIEW RECIPE <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="dish-reflection"></div>
+        </div>
+    </section>
+
+    <!-- CHEF'S SIGNATURE SECTION -->
+    <section class="chef-signature">
+        <div class="signature-container">
+            <div class="chef-portrait">
+                <img src="profile.jpg" alt="Chef Grace Owich" class="portrait-img">
+                <div class="portrait-frame"></div>
+            </div>
+            <div class="signature-quote">
+                <h3>"These recipes carry my soul."</h3>
+                <p>Each dish is a chapter from my culinary journey—perfected through years of passion.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Recipes</h3>
+                <ul>
+                    <li><a href="recipe.html">Grilled Chicken</a></li>
+                    <li><a href="recipe1.html">Fried Fish</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grace's Kitchen. All rights reserved.</p>
+            <button class="mode-toggle">🌓</button>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // 3D Hover Effects
+        document.querySelectorAll('.dish-container').forEach(container => {
+            container.addEventListener('mousemove', (e) => {
+                const x = e.clientX - container.getBoundingClientRect().left;
+                const y = e.clientY - container.getBoundingClientRect().top;
+                
+                const centerX = container.offsetWidth / 2;
+                const centerY = container.offsetHeight / 2;
+                
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+                
+                container.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
